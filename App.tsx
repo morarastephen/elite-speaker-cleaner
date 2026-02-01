@@ -12,12 +12,17 @@ import Settings from './pages/Settings';
 /**
  * MAIN APP COMPONENT
  * This acts as the central router for the application.
+ * Also manages PWA install prompts and theme management.
  */
 const App: React.FC = () => {
   // STATE: Keeps track of which page the user is looking at
   const [currentView, setCurrentView] = useState<AppView>('HOME');
   // STATE: Keeps track of visual theme (Dark vs Default)
   const [theme, setTheme] = useState<Theme>(Theme.DARK);
+  // PWA STATE: Stores the beforeinstallprompt event
+  const [installPrompt, setInstallPrompt] = useState<any>(null);
+  // PWA STATE: Tracks if the app is already installed
+  const [isInstalled, setIsInstalled] = useState(false);
 
   // CALLBACK: Toggles the theme state. Wrapped in useCallback to prevent unnecessary re-renders.
   const toggleTheme = useCallback(() => {
@@ -27,6 +32,39 @@ const App: React.FC = () => {
   // CALLBACK: Helper function to change views
   const navigate = useCallback((view: AppView) => {
     setCurrentView(view);
+  }, []);
+
+  // PWA CALLBACK: Triggers the install prompt
+  const handleInstallClick = useCallback(async () => {
+    if (installPrompt) {
+      installPrompt.prompt();
+      const { outcome } = await installPrompt.userChoice;
+      if (outcome === 'accepted') {
+        setIsInstalled(true);
+        setInstallPrompt(null);
+      }
+    }
+  }, [installPrompt]);
+
+  // EFFECT: Listen for beforeinstallprompt event (PWA)
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (event: Event) => {
+      event.preventDefault();
+      setInstallPrompt(event);
+    };
+
+    const handleAppInstalled = () => {
+      setIsInstalled(true);
+      setInstallPrompt(null);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
+    };
   }, []);
 
   // EFFECT: Updates the HTML body background color whenever the theme state changes
@@ -55,7 +93,7 @@ const App: React.FC = () => {
       case 'TEST':
         return <TestSpeaker onBack={() => navigate('HOME')} onHome={() => navigate('HOME')} />;
       case 'SETTINGS':
-        return <Settings onBack={() => navigate('HOME')} theme={theme} onToggleTheme={toggleTheme} />;
+        return <Settings onBack={() => navigate('HOME')} theme={theme} onToggleTheme={toggleTheme} installAvailable={!!installPrompt && !isInstalled} onInstall={handleInstallClick} />;
       default:
         return <Home onNavigate={navigate} />;
     }

@@ -29,7 +29,10 @@
     <meta property="twitter:title" content="SonicPurge Elite - Speaker Cleaner | Remove Dust & Water Damage">
     <meta property="twitter:description" content="SonicPurge Elite is a cutting-edge web application that leverages ultrasonic frequencies and vibration technology to clean smartphone speakers. Whether dealing with dust accumulation or water damage, SonicPurge provides three specialized cleaning modes to restore your speaker to pristine condition.">
     <meta property="twitter:image" content="">
-    
+     <!-- PWA: Link the manifest file -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Mobile UI: Set the color of the status bar -->
+    <meta name="theme-color" content="#000000">
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -101,5 +104,15 @@
 <body class="transition-colors duration-500">
     <div id="root"></div>
 <script type="module" src="/index.tsx"></script>
+ <!-- PWA: Service Worker Registration Script -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Service Worker registered!', reg))
+            .catch(err => console.log('Service Worker registration failed: ', err));
+        });
+      }
+    </script>
 </body>
 </html>
