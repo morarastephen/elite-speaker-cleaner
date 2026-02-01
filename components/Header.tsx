@@ -19,7 +19,9 @@ const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onSettings, on
     MANUAL: 'Manual Control',
     VIBRATE: 'Vibrate Cleaner',
     TEST: 'Speaker Check',
+    DONATE: 'Support Project',
     SETTINGS: 'Settings'
+    
   };
 
   return (

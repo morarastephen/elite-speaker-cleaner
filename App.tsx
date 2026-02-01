@@ -8,6 +8,8 @@ import ManualCleaner from './pages/ManualCleaner';
 import VibrateCleaner from './pages/VibrateCleaner';
 import TestSpeaker from './pages/TestSpeaker';
 import Settings from './pages/Settings';
+import Donate from './pages/Donate';
+
 
 /**
  * MAIN APP COMPONENT
@@ -92,30 +94,40 @@ const App: React.FC = () => {
         return <VibrateCleaner onBack={() => navigate('HOME')} onFinish={() => navigate('TEST')} />;
       case 'TEST':
         return <TestSpeaker onBack={() => navigate('HOME')} onHome={() => navigate('HOME')} />;
+      case 'DONATE':
+        return <Donate onBack={() => navigate('SETTINGS')} />;
       case 'SETTINGS':
-        return <Settings onBack={() => navigate('HOME')} theme={theme} onToggleTheme={toggleTheme} installAvailable={!!installPrompt && !isInstalled} onInstall={handleInstallClick} />;
+        return (
+          <Settings 
+            onBack={() => navigate('HOME')} 
+            theme={theme} 
+            onToggleTheme={toggleTheme} 
+            installAvailable={!!installPrompt}
+            onInstall={handleInstallClick}
+            onDonate={() => navigate('DONATE')}
+          />
+        );
       default:
         return <Home onNavigate={navigate} />;
     }
   }
 
   return (
-    // Dynamic classes: Tailwind allows us to change styles based on variables like {theme}
     <div className={`min-h-screen flex flex-col text-white transition-all duration-700 ${theme === Theme.DARK ? 'bg-black' : 'bg-slate-900'}`}>
       <Header 
         currentView={currentView} 
         onNavigate={navigate} 
         onSettings={() => navigate('SETTINGS')} 
-        onBack={() => navigate('HOME')}
+        onBack={() => {
+            if (currentView === 'DONATE') navigate('SETTINGS');
+            else navigate('HOME');
+        }}
       />
       
-      {/* Viewport for the current page */}
       <main className="flex-1 overflow-hidden relative">
         {renderView()}
       </main>
       
-      {/* 2026 DESIGN TREND: Ambient background glow. 
-          Using blur-[100px] creates a soft "Spatial" UI feel. */}
       <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-orange-500/10 blur-[100px] pointer-events-none rounded-full"></div>
       <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[100px] pointer-events-none rounded-full"></div>
     </div>
