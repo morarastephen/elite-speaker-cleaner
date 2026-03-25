@@ -82,7 +82,7 @@ const Donate: React.FC<DonateProps> = ({ onBack }) => {
         </section> */}
       </div>
 
-<div className="fixed inset-0 flex items-center justify-center pointer-events-none">        <button 
+<div className="fixed bottom-0 left-0 right-0 flex justify-center p-6 pointer-events-none">        <button 
           onClick={onBack}
           className="w-full max-w-lg mx-auto pointer-events-auto py-5 glass border-white/10 rounded-[28px] font-bold tracking-widest text-xs transition-all active:scale-95 shadow-2xl backdrop-blur-3xl uppercase text-gray-400"
         >
