@@ -24,21 +24,21 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
     <div className="h-full px-6 flex flex-col items-center justify-center max-w-lg mx-auto pb-20 overflow-y-auto">
       {/* Logo section with animated glow effect */}
-      <div className="relative mb-12 group">
-        {/* Animated background blur effect */}
+<div className="relative mb-12 group pt-6 md:pt-10 lg:pt-14">        {/* Animated background blur effect */}
         <div className="absolute inset-0 bg-orange-500/30 blur-[50px] rounded-full group-hover:bg-orange-500/40 transition-all duration-500"></div>
         {/* Speaker icon with pulse animation */}
-        <div className="relative glass w-48 h-48 rounded-[30px] flex items-center justify-center glow-orange border-white/10 animate-pulse-slow">
+        <div className="relative glass w-24 h-24 rounded-[30px] flex items-center justify-center glow-orange border-white/10 animate-pulse-slow">
           <svg className="w-24 h-24 text-orange-500 drop-shadow-2xl" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2a3 3 0 013 3v7a3 3 0 01-6 0V5a3 3 0 013-3zM19 10v2a7 7 0 01-14 0v-2M12 19v3M8 22h8" />
           </svg>
         </div>
       </div>
 
       {/* Header and instructions section */}
       <div className="text-center space-y-4 mb-12 px-4">
-        <p className="text-gray-400 text-sm font-medium tracking-widest uppercase">ElitePhoneCleaner</p>
+        <p className="text-gray-400 text-sm font-medium tracking-widest uppercase">Elite-Phone-Cleaner</p>
         <p className="text-gray-300 leading-relaxed italic">
+          Elite-Phone-Cleaner is a professional-grade web utility designed to restore your audio to factory standards without touching a single tool. By leveraging specific ultrasonic frequencies and high-intensity vibration patterns, our app physically ejects water and debris from the inside out.
           1. Raise volume to the maximum.<br/>
           2. Position phone speaker facing downwards.
         </p>

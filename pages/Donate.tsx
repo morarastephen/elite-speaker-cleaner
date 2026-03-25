@@ -28,7 +28,7 @@ const Donate: React.FC<DonateProps> = ({ onBack }) => {
   return (
     <div className="h-full px-6 py-8 overflow-y-auto max-w-lg mx-auto pb-24">
       <p className="text-center text-gray-400 text-sm mb-10 italic">
-        Your contributions help us maintain the servers and continue developing sonic tools for everyone.
+        We are dedicated to keeping your devices sounding their best. If ElitePhoneCleaner successfully restored your audio and saved you a trip to the repair shop, please consider leaving a small donation to help us maintain our servers and frequency research. Every contribution, no matter the size, goes a long way in supporting our mission to provide free, effective speaker cleaning for everyone.
       </p>
 
       <div className="space-y-6">
@@ -82,8 +82,7 @@ const Donate: React.FC<DonateProps> = ({ onBack }) => {
         </section> */}
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 p-6 pointer-events-none">
-        <button 
+<div className="fixed inset-0 flex items-center justify-center pointer-events-none">        <button 
           onClick={onBack}
           className="w-full max-w-lg mx-auto pointer-events-auto py-5 glass border-white/10 rounded-[28px] font-bold tracking-widest text-xs transition-all active:scale-95 shadow-2xl backdrop-blur-3xl uppercase text-gray-400"
         >

@@ -27,7 +27,7 @@ const Settings: React.FC<SettingsProps> = ({ theme, onToggleTheme, installAvaila
               </div>
               <div>
                 <p className="font-bold text-lg">Project Support</p>
-                <p className="text-xs text-gray-400">Keep ElitePhoneCleaner free and ad-free forever.</p>
+                <p className="text-xs text-gray-400">We are dedicated to keeping your devices sounding their best. If ElitePhoneCleaner successfully restored your audio and saved you a trip to the repair shop, please consider leaving a small donation to help us maintain our servers and frequency research.</p>
               </div>
            </div>
            <button 
