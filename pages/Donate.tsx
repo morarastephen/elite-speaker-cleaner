@@ -42,7 +42,7 @@ const Donate: React.FC<DonateProps> = ({ onBack }) => {
             <h4 className="font-bold text-lg">PayPal</h4>
           </div>
           <a 
-            href={PAYPAL_URL} 
+            href="https://www.paypal.com/donate/?business=morarajnr.me@gmail.com&currency_code=USD" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-full py-4 bg-[#0070ba] text-white rounded-2xl font-bold tracking-widest text-sm flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-lg shadow-blue-500/10"
@@ -51,7 +51,7 @@ const Donate: React.FC<DonateProps> = ({ onBack }) => {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </a>
         </section>
-
+{/* 
         <section className="glass p-6 rounded-[32px] border border-gray-500/20">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 rounded-2xl bg-gray-500/10 flex items-center justify-center text-orange-400">
@@ -79,7 +79,7 @@ const Donate: React.FC<DonateProps> = ({ onBack }) => {
           <p className="text-[9px] text-gray-600 mt-3 text-center uppercase tracking-widest font-bold">
             Only send ETH or ERC-20 tokens to this address.
           </p>
-        </section>
+        </section> */}
       </div>
 
       <div className="fixed bottom-0 left-0 right-0 p-6 pointer-events-none">

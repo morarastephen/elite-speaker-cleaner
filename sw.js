@@ -6,7 +6,7 @@
  * Optimized for Netlify hosting with proper path handling.
  */
 
-const CACHE_NAME = 'sonicpurge-v2';
+const CACHE_NAME = 'elitephonecleaner-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',

@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onSettings, on
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const viewTitles: Record<AppView, string> = {
-    HOME: 'SonicPurge',
+    HOME: 'ElitePhoneCleaner',
     AUTO: 'Auto Clean',
     MANUAL: 'Manual Control',
     VIBRATE: 'Vibrate Cleaner',
@@ -75,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onSettings, on
               <button 
                 onClick={() => {
                   if (navigator.share) {
-                    navigator.share({ title: 'SonicPurge', text: 'Clean your speaker with SonicPurge!', url: window.location.href });
+                    navigator.share({ title: 'ElitePhoneCleaner', text: 'Clean your speaker with ElitePhoneCleaner!', url: window.location.href });
                   }
                   setIsMenuOpen(false);
                 }}

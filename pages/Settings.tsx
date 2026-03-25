@@ -27,7 +27,7 @@ const Settings: React.FC<SettingsProps> = ({ theme, onToggleTheme, installAvaila
               </div>
               <div>
                 <p className="font-bold text-lg">Project Support</p>
-                <p className="text-xs text-gray-400">Keep SonicPurge free and ad-free forever.</p>
+                <p className="text-xs text-gray-400">Keep ElitePhoneCleaner free and ad-free forever.</p>
               </div>
            </div>
            <button 
@@ -53,7 +53,7 @@ const Settings: React.FC<SettingsProps> = ({ theme, onToggleTheme, installAvaila
                 </div>
                 <div>
                   <p className="font-bold text-lg">Add to Home Screen</p>
-                  <p className="text-xs text-gray-400">Install SonicPurge for faster access and offline cleaning.</p>
+                  <p className="text-xs text-gray-400">Install ElitePhoneCleaner for faster access and offline cleaning.</p>
                 </div>
              </div>
              <button 
@@ -136,7 +136,7 @@ const Settings: React.FC<SettingsProps> = ({ theme, onToggleTheme, installAvaila
           <SettingsItem icon={<InfoIcon />} title="Privacy Policy" desc="Read our data policies" color="text-indigo-400" bg="bg-indigo-400/10" />
           <SettingsItem icon={<InfoIcon />} title="Terms Of Service" desc="Usage guidelines" color="text-slate-400" bg="bg-slate-400/10" />
           <div className="p-6 text-center">
-            <p className="text-sm font-bold tracking-tight">SonicPurge Elite</p>
+            <p className="text-sm font-bold tracking-tight">Elite tools</p>
             <p className="text-[10px] text-gray-600 uppercase tracking-widest mt-1">Version 2026.1.0</p>
           </div>
         </div>

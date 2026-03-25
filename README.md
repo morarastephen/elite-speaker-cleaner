@@ -1,4 +1,4 @@
-# SonicPurge - Elite Speaker Cleaner
+# Elitephonecleaner - Elite Speaker Cleaner
 
 > A futuristic phone speaker cleaner using high-frequency sound waves and precise vibrations to remove dust and water, following 2026 UX design trends.
 
@@ -9,13 +9,13 @@
 
 ## 🎯 Overview
 
-SonicPurge Elite is a cutting-edge web application that leverages ultrasonic frequencies and vibration technology to clean smartphone speakers. Whether dealing with dust accumulation or water damage, SonicPurge provides three specialized cleaning modes to restore your speaker to pristine condition.
+ Elitephonecleaner is a cutting-edge web application that leverages ultrasonic frequencies and vibration technology to clean smartphone speakers. Whether dealing with dust accumulation or water damage, SonicPurge provides three specialized cleaning modes to restore your speaker to pristine condition.
 
 ## ✨ Features
 
 ### 🔊 Three Cleaning Modes
 
-- **AUTO Mode** - Fully automated cleaning using AI-optimized ultrasonic frequencies
+- **AUTO Mode** - Fully automated cleaning using ultrasonic frequencies
 - **MANUAL Mode** - Granular control over frequency, intensity, and duration settings
 - **VIBRATE Mode** - Precision vibration patterns specifically designed for water and particle removal
 

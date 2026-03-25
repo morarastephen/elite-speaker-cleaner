@@ -37,7 +37,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
       {/* Header and instructions section */}
       <div className="text-center space-y-4 mb-12 px-4">
-        <p className="text-gray-400 text-sm font-medium tracking-widest uppercase">Sonic Ejection System</p>
+        <p className="text-gray-400 text-sm font-medium tracking-widest uppercase">ElitePhoneCleaner</p>
         <p className="text-gray-300 leading-relaxed italic">
           1. Raise volume to the maximum.<br/>
           2. Position phone speaker facing downwards.
