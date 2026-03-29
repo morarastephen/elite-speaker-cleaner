@@ -229,7 +229,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ### Reporting Bugs
 Please report bugs through the Settings > VIP Customer Support option or open an issue on GitHub.
 
-## 🔮 Roadmap
+## 🔮 Future Roadmap
 
 - [ ] AI-powered device detection
 - [ ] Custom frequency profiles
@@ -256,7 +256,7 @@ Please report bugs through the Settings > VIP Customer Support option or open an
 
 ## 👨‍💻 Author
 
-**Stephub Labs** - 2026
+**Stephub Labs** (https://stephubhq.netlify.app)- 2026
 
 ## 🙏 Acknowledgments
 
