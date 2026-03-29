@@ -48,7 +48,7 @@
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd sonicpurge-elite-speaker-cleaner
+cd elite-speaker-cleaner
 
 # Install dependencies
 npm install
@@ -72,7 +72,7 @@ npm run preview
 ## 📁 Project Structure
 
 ```
-sonicpurge-elite-speaker-cleaner/
+elite-speaker-cleaner/
 ├── App.tsx                 # Root application component
 ├── index.tsx              # Entry point
 ├── index.html             # HTML template
@@ -229,7 +229,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ### Reporting Bugs
 Please report bugs through the Settings > VIP Customer Support option or open an issue on GitHub.
 
-## 🔮 Roadmap
+## 🔮 Future Roadmap
 
 - [ ] AI-powered device detection
 - [ ] Custom frequency profiles
@@ -256,7 +256,7 @@ Please report bugs through the Settings > VIP Customer Support option or open an
 
 ## 👨‍💻 Author
 
-**SonicPurge Development Team** - 2026
+[**[Stephub Labs](https://stephubhq.netlify.app)** - 2026
 
 ## 🙏 Acknowledgments
 
@@ -267,6 +267,6 @@ Please report bugs through the Settings > VIP Customer Support option or open an
 
 ---
 
-**Made with ❤️ for cleaner speakers everywhere**
+**Made with ❤️ for clear sound lovers everywhere**
 
 *Last Updated: February 2026*
