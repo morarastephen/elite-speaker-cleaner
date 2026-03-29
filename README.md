@@ -256,7 +256,7 @@ Please report bugs through the Settings > VIP Customer Support option or open an
 
 ## 👨‍💻 Author
 
-[**Stephub Labs** (https://stephubhq.netlify.app)- 2026](url)
+[**[Stephub Labs](https://stephubhq.netlify.app)** - 2026
 
 ## 🙏 Acknowledgments
 
